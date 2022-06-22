@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 400px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: small;
+  background: #222;
+  font-size: 120%;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background: #000000d0;
+  opacity: 0.9;
+  color: white;
+  padding: 1.5em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 1em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 85%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Enter City";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+.weather.nocity {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+  font-size: large;
+}
+
+.weather.nocity:after {
+  visibility: visible;
+  content: "No such city found.";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
